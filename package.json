@@ -1,0 +1,24 @@
+{
+    "name": "node-testing",
+    "version": "1.0.0",
+    "main": "index.js",
+    "license": "MIT",
+    "type": "module",
+    "dependencies": {
+        "@gear-js/api": "0.37.2",
+        "@polkadot/api": "10.12.6",
+        "@polkadot/types": "10.12.6",
+        "sails-js": "0.1.8",
+        "ts-node": "^10.9.2",
+        "typescript": "^5.5.4"
+    },
+    "scripts": {
+        "generate:vft": "sails-js generate ./extended_vft.idl -o ./src/extended_vft.ts -n VftProgram",
+        "simple-test": "npx tsx src/simple_test.ts",
+        "batch-test": "npx tsx src/batch_test.ts"
+    }
+    ,
+    "devDependencies": {
+        "tsx": "^4.16.2"
+    }
+}
