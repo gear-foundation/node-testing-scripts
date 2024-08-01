@@ -5,18 +5,18 @@
 First, ensure you have Node.js installed. Then, install the dependencies:
 
 ```bash
-npm install
+yarn install
 ```
 
 ## Running a Simple Test
 To run a simple test, execute the following command. Replace <your_provider_address> with your actual provider address. Ensure the address starts with wss:
 
 ```bash
-npm run simple-test -- <your_provider_address>
+yarn test simple <your_provider_address>
 ```
 For example:
 ```bash
-npm run simple-test -- wss://rpc.vara.network
+yarn test simple wss://rpc.vara.network
 ```
 Upon successful completion, the test will calculate the gas for `transfer` and `approve`, and check the state in the fungible token contract.
 
@@ -24,7 +24,7 @@ Upon successful completion, the test will calculate the gas for `transfer` and `
 To perform load testing on the node, execute the following command. Replace <your_provider_address> with your actual provider address. Ensure the address starts with wss:
 
 ```bash
-npm run batch-test -- <your_provider_address>
+yarn test batch <your_provider_address>
 ```
 
 This test sends 10,000 state reading requests to the contract.
